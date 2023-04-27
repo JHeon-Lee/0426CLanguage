@@ -145,7 +145,7 @@ void swapNum(int num1, int num2)
 	printf("함수 안 num1 : %d, num2 : %d\n", num1, num2);
 }
 
-void swapPtr(int* ptr1, int* ptr2)
+void swapPtr(int* ptr1, int* ptr2) // 엄밀히, C에선 Call by Value만 사용되지만, 포인터로 Call by Reference 효과를 낸다고 보면 된다
 {
 	int* temp = *ptr1;
 	*ptr1 = *ptr2;
@@ -154,7 +154,7 @@ void swapPtr(int* ptr1, int* ptr2)
 	printf("함수 안 ptr1 : %d, ptr2 : %d\n", *ptr1, *ptr2);
 }
 
-void swapPtr1(int** ptr1, int** ptr2)
+void swapPtr1(int** ptr1, int** ptr2) // 윗 함수와 달리 바로 값을 참조해서 바꾸는게 아닌, 포인터가 참조하는 변수의 주소값을 바꿔준다
 {
 	int* temp = *ptr1;
 	*ptr1 = *ptr2;
